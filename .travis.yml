@@ -1,0 +1,19 @@
+language:
+  python
+python:
+  -'3.7.4'
+install:
+  -pip install -r requiremants.txt
+script:
+  #-cd gateway
+  #-coverage run manage.py test
+  #- coverage report -m
+
+  -cd guest
+  -coverage run manage.py test
+
+  -cd ../restaurant
+  -coverage run manage.py test
+
+  -cd ../rooms
+  -coverage run manage.py test
